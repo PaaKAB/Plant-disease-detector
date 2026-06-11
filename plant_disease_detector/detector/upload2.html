@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Detection</title>
+  
+<style>
+          
+    </style>
+</head>
+<body>
+    <h1>Upload a Plant Image</h1>
+
+    
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" id="imageInput" name="image" accept="image/*">
+        <button type="submit">Upload</button>
+    </form>
+
+    
+    <h2>Image Preview:</h2>
+    <img id="imagePreview" src="" alt="Image Preview" width="300px" style="display:none;">
+
+   
+    <script>
+        document.getElementById('imageInput').onchange = function(event) {
+            const imagePreview = document.getElementById('imagePreview');
+            const file = event.target.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    imagePreview.src = e.target.result;
+                    imagePreview.style.display = 'block'; 
+                };
+                reader.readAsDataURL(file); 
+            }
+        };
+    </script>
+</body>
+</html>
+

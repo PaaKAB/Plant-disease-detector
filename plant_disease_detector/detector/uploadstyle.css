@@ -1,0 +1,23 @@
+h1{
+    text-align: center;
+    font-size: 36pt;
+    color: black;
+}
+body{
+    background-color: rgb(52, 71, 40);
+}
+form {
+    margin: 0 auto;
+    width:250px;
+    }
+
+button {
+        background-color: #18e197; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+     }

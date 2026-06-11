@@ -1,0 +1,10 @@
+Open the application in visual studio
+Type "cd plantds" in the termninal to Download Django and other requirement dependencies
+To download dependencies: pip install -r requirements.txt
+then use the cd command in terminal to go into the directory that contains manage.py or in other words type out these commands
+
+cd plant_disease_detector
+python manage.py runserver
+
+If it doesnt work, make sure all the file references have been localized for your computer and make sure all dependencies have been downloaded.
+
